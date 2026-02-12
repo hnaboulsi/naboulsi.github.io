@@ -76,7 +76,9 @@ const highlightNavOnScroll = () => {
         const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
         
         if (navLink) {
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            // Use inclusive start / exclusive end to avoid boundary overlap
+            // where the previous section can stay active.
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
                 navLink.classList.add('active');
             } else {
                 navLink.classList.remove('active');
