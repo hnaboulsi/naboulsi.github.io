@@ -68,21 +68,27 @@ const sections = document.querySelectorAll('section[id]');
 
 const highlightNavOnScroll = () => {
     const scrollY = window.pageYOffset;
+    const viewportProbe = scrollY + window.innerHeight * 0.45;
+    const atPageBottom = window.innerHeight + scrollY >= document.documentElement.scrollHeight - 2;
+    let activeSectionId = sections[0]?.getAttribute('id');
 
     sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-        
-        if (navLink) {
-            // Use inclusive start / exclusive end to avoid boundary overlap
-            // where the previous section can stay active.
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                navLink.classList.add('active');
-            } else {
-                navLink.classList.remove('active');
-            }
+        if (viewportProbe >= section.offsetTop) {
+            activeSectionId = section.getAttribute('id');
+        }
+    });
+
+    // Ensure the final section can become active even when it is short.
+    if (atPageBottom && sections.length > 0) {
+        activeSectionId = sections[sections.length - 1].getAttribute('id');
+    }
+
+    navLinks.forEach(link => {
+        const targetId = link.getAttribute('href')?.replace('#', '');
+        if (targetId === activeSectionId) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
         }
     });
 };
