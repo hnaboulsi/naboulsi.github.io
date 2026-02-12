@@ -150,6 +150,52 @@ timelineItems.forEach(item => {
     timelineObserver.observe(item);
 });
 
+// ===== Gallery Drag-to-Scroll =====
+const gallery = document.getElementById('galleryScroll');
+if (gallery) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    gallery.addEventListener('mousedown', (e) => {
+        isDown = true;
+        gallery.style.cursor = 'grabbing';
+        startX = e.pageX - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
+    });
+
+    gallery.addEventListener('mouseleave', () => {
+        isDown = false;
+        gallery.style.cursor = 'grab';
+    });
+
+    gallery.addEventListener('mouseup', () => {
+        isDown = false;
+        gallery.style.cursor = 'grab';
+    });
+
+    gallery.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - gallery.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        gallery.scrollLeft = scrollLeft - walk;
+    });
+
+    // Hide hint after first scroll
+    const galleryHint = document.querySelector('.gallery-hint');
+    if (galleryHint) {
+        gallery.addEventListener('scroll', () => {
+            if (gallery.scrollLeft > 50) {
+                galleryHint.style.opacity = '0';
+                galleryHint.style.transition = 'opacity 0.3s ease';
+            } else {
+                galleryHint.style.opacity = '1';
+            }
+        }, { passive: true });
+    }
+}
+
 // ===== Add CSS for active nav link =====
 const style = document.createElement('style');
 style.textContent = `
