@@ -49,7 +49,8 @@
         <div class="hero-content">
             <h1 class="hero-title">Hassan Naboulsi</h1>
             <p class="hero-subtitle">UC Berkeley EECS</p>
-            <p class="hero-tagline">I build hardware and software systems, with a focus on sensors, testing, and real-world deployment.</p>
+            <p class="hero-tagline">I build hardware and software systems, with a focus on sensors, testing, and
+                real-world deployment.</p>
             <div class="hero-links">
                 <a href="mailto:naboulsi@berkeley.edu" class="hero-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -104,9 +105,12 @@
                             <span class="timeline-date">Jan 2026 – Present</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Building AI copilot that helps FPGA engineers write Verilog and debug simulation failures</li>
-                            <li>Bridge between AI team and hardware workflow—I explain what Vivado logs look like and which design steps are worth automating</li>
-                            <li>Built project memory features so the AI remembers what you were working on between sessions</li>
+                            <li>Built Python pipeline parsing Vivado simulation logs and Verilog source files to extract
+                                design metadata and identify failure patterns across hardware modules</li>
+                            <li>Implemented automated detection for 20+ error types (syntax errors, timing violations,
+                                latch inferences) in FPGA synthesis and simulation output</li>
+                            <li>Developed project memory system tracking file dependencies and design context to
+                                maintain consistency across debugging sessions</li>
                         </ul>
                     </div>
                 </div>
@@ -122,9 +126,12 @@
                             <span class="timeline-date">Jun 2025 – Aug 2025</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Built test setups at partner lab in France, ran 1.4 kW stress tests to find failure points and thermal limits</li>
-                            <li>Wrote Python scripts to process voltage/current measurements and calculate converter response times</li>
-                            <li>Calibrated voltage measurement circuits to 0.35% accuracy with 24-hour stability tests</li>
+                            <li>Designed test infrastructure for IoT power converters; executed 1.4 kW stress tests
+                                isolating thermal failures</li>
+                            <li>Developed Python + Pandas pipelines processing oscilloscope data to quantify settling
+                                time, ripple, and regulation</li>
+                            <li>Calibrated voltage-sensing circuits to &plusmn;0.35% accuracy over 24-hour runs,
+                                establishing validation procedures for production</li>
                         </ul>
                     </div>
                 </div>
@@ -140,9 +147,12 @@
                             <span class="timeline-date">Jan 2025 – Jun 2025</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Wrote Python scripts to check water quality sensor data (pH, turbidity, chlorine) for missing values and out-of-range readings</li>
-                            <li>Added automated tests using pytest—increased code coverage from 35% to 85%</li>
-                            <li>Worked with civil engineers and sensor techs to troubleshoot database sync issues and learn field deployment constraints</li>
+                            <li>Developed Python scripts (Pandas, Pytest) validating real-time sensor data (pH,
+                                turbidity, chlorine), flagging anomalies</li>
+                            <li>Implemented automated test suite for monitoring software, increasing coverage from 35%
+                                to 85% before updates</li>
+                            <li>Collaborated with civil engineers to troubleshoot database sync errors and document
+                                deployment needs</li>
                         </ul>
                     </div>
                 </div>
@@ -158,9 +168,12 @@
                             <span class="timeline-date">May 2024 – Jul 2024</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Designed battery pack for water quality sensor drone achieving 140 Wh/kg energy density</li>
-                            <li>Fabricated 24 flexible paper batteries by hand—92% success rate, reduced internal resistance by 35%</li>
-                            <li>Tested batteries through 100 charge/discharge cycles with 85% capacity remaining</li>
+                            <li>Designed battery pack for water quality sensor drone, achieving 140 Wh/kg energy density
+                                in waterproof housing</li>
+                            <li>Fabricated 24 flexible paper batteries by hand-assembling electrodes; 92% success rate,
+                                35% resistance reduction</li>
+                            <li>Wrote C++ code for Arduino-based sensor system measuring battery output (0.69V, 50&mu;A)
+                                and transmitting data to monitoring interface</li>
                         </ul>
                     </div>
                 </div>
@@ -176,8 +189,10 @@
                             <span class="timeline-date">Feb 2024 – May 2024</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Wrote 25+ Python test scripts to help transition city website serving 60,000+ residents</li>
-                            <li>Found and documented 40+ bugs across permit forms, contact pages, and document uploads</li>
+                            <li>Wrote 25+ Python test scripts to help transition city website serving 60,000+ residents
+                            </li>
+                            <li>Found and documented 40+ bugs across permit forms, contact pages, and document uploads
+                            </li>
                             <li>Set up automated test runs, reducing manual testing time by ~30%</li>
                         </ul>
                     </div>
@@ -199,8 +214,10 @@
                     </div>
                     <p class="project-description">
                         Taking hands-on PCB design course focusing on practical assembly and manufacturing skills.
-                        Designed three projects in KiCad: light sensor board, USB phone charger, and custom microcontroller-based design.
-                        Built and debugged USB charger that actually charges my phone—learning soldering, component selection, and DFM constraints.
+                        Designed three projects in KiCad: light sensor board, USB phone charger, and custom
+                        microcontroller-based design.
+                        Built and debugged USB charger that actually charges my phone—learning soldering, component
+                        selection, and DFM constraints.
                     </p>
                     <div class="project-stats">
                         <span class="project-stat">
@@ -228,10 +245,8 @@
                         <span class="project-role">Stanford Collaboration</span>
                     </div>
                     <p class="project-description">
-                        Collaborated with a Stanford postdoc to investigate thermal dynamics of lithium-ion batteries.
-                        Researched resistive losses and tested coatings like lithium niobate to mitigate thermal
-                        hotspots.
-                        Presented findings to over 100 researchers, advancing battery safety and efficiency.
+                        Collaborated with Stanford postdoc investigating thermal management for lithium-ion batteries;
+                        tested ceramic coatings to mitigate thermal hotspots.
                     </p>
                     <div class="project-stats">
                         <span class="project-stat">
@@ -267,9 +282,8 @@
                         <span class="leadership-role">Co-Director</span>
                     </div>
                     <ul class="leadership-details">
-                        <li>Led a major hackathon with 300+ signups, securing over $20,000 in sponsorships from companies like Desmos, Wolfram, and OpenAI</li>
-                        <li>Brought in a speaker from NASA to inspire participants and provided hands-on opportunities to innovate and solve real-world problems</li>
-                        <li>Managed 300+ participants and secured $20k+ in corporate sponsorships</li>
+                        <li>Directed hardware hackathon with 300+ signups; secured $20,000+ in sponsorships from OpenAI,
+                            and Desmos.</li>
                     </ul>
                 </div>
 
@@ -280,11 +294,14 @@
                         <span class="leadership-role">Co-Director</span>
                     </div>
                     <p class="leadership-link-container">
-                        <a href="https://lavozdeanza.com/features/2024/06/07/de-anza-hackathon-returns-for-spring-and-comes-with-a-twist/" target="_blank" class="leadership-link">Read Press Coverage</a>
+                        <a href="https://lavozdeanza.com/features/2024/06/07/de-anza-hackathon-returns-for-spring-and-comes-with-a-twist/"
+                            target="_blank" class="leadership-link">Read Press Coverage</a>
                     </p>
                     <ul class="leadership-details">
-                        <li>Directed a hardware-focused hackathon with 200+ signups, leading the organizing team and securing speakers from Stanford</li>
-                        <li>Obtained sponsorships from companies like Redbull and Wolfram while overseeing logistics and marketing</li>
+                        <li>Directed a hardware-focused hackathon with 200+ signups, leading the organizing team and
+                            securing speakers from Stanford</li>
+                        <li>Obtained sponsorships from companies like Redbull and Wolfram while overseeing logistics and
+                            marketing</li>
                         <li>Managed 200+ participants with a specific focus on hardware-software integration</li>
                     </ul>
                 </div>
@@ -297,8 +314,10 @@
                     </div>
                     <ul class="leadership-details">
                         <li>Led De Anza College's largest computer engineering club with 500+ members</li>
-                        <li>Organized technical conferences with 100+ attendees featuring speakers from Google and other tech companies</li>
-                        <li>Mentored 60+ students in technical projects and helped them debug code, design systems, and learn new tools</li>
+                        <li>Organized technical conferences with 100+ attendees featuring speakers from Google and other
+                            tech companies</li>
+                        <li>Mentored 60+ students in technical projects and helped them debug code, design systems, and
+                            learn new tools</li>
                     </ul>
                 </div>
 
@@ -309,9 +328,8 @@
                         <span class="leadership-role">Instrument Engineer</span>
                     </div>
                     <ul class="leadership-details">
-                        <li>Instrument Engineer on 12-person Mars mission design team during 4-day capstone project</li>
-                        <li>Determined instrument requirements (radiation sensors, infrared spectrometer, XRF) using actual NASA Curiosity/Perseverance mission data</li>
-                        <li>Balanced science goals against hard constraints: 290 kg mass, 130W power, $300M budget</li>
+                        <li>Defined instrument requirements for Mars habitat system, balancing scientific objectives
+                            against 290 kg mass and 130 W power constraints.</li>
                     </ul>
                 </div>
 
@@ -323,7 +341,7 @@
                     </div>
                     <ul class="leadership-details">
                         <li>Taught intermediate and advanced Python and Java to 50+ elementary and middle school
-                        students</li>
+                            students</li>
                         <li>Created curriculum material including project-based learning exercises and coding challenges
                         </li>
                         <li>Helped overcome economic barriers to quality STEM education</li>
@@ -369,21 +387,22 @@
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">Pytest</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
                         <span class="skill-tag">C/C++</span>
                         <span class="skill-tag">MATLAB</span>
                         <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Java</span>
                         <span class="skill-tag">Bash</span>
                     </div>
                 </div>
                 <div class="skill-category fade-in">
                     <h3>Engineering</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Data Acquisition</span>
-                        <span class="skill-tag">Root Cause Analysis</span>
-                        <span class="skill-tag">Fabrication</span>
-                        <span class="skill-tag">System Integration</span>
-                        <span class="skill-tag">Technical Writing</span>
+                        <span class="skill-tag">Oscilloscopes</span>
+                        <span class="skill-tag">Power Analyzers</span>
+                        <span class="skill-tag">Circuit Validation</span>
+                        <span class="skill-tag">Embedded Systems</span>
+                        <span class="skill-tag">PCB Layout</span>
                     </div>
                 </div>
                 <div class="skill-category fade-in">
@@ -394,7 +413,9 @@
                         <span class="skill-tag">JIRA</span>
                         <span class="skill-tag">Jenkins</span>
                         <span class="skill-tag">LTspice</span>
-                        <span class="skill-tag">Automation Scripting</span>
+                        <span class="skill-tag">Vivado</span>
+                        <span class="skill-tag">KiCad</span>
+                        <span class="skill-tag">Confluence</span>
                     </div>
                 </div>
             </div>
@@ -410,19 +431,23 @@
         <div class="gallery-wrapper fade-in">
             <div class="gallery-scroll" id="galleryScroll">
                 <div class="gallery-item">
-                    <img src="assets/shuttle-front.png" alt="Space Shuttle Discovery at Smithsonian Udvar-Hazy Center" loading="lazy">
+                    <img src="assets/shuttle-front.png" alt="Space Shuttle Discovery at Smithsonian Udvar-Hazy Center"
+                        loading="lazy">
                     <span class="gallery-caption">Space Shuttle Discovery</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/shuttle-engines.png" alt="Space Shuttle Discovery engines at Smithsonian Udvar-Hazy Center" loading="lazy">
+                    <img src="assets/shuttle-engines.png"
+                        alt="Space Shuttle Discovery engines at Smithsonian Udvar-Hazy Center" loading="lazy">
                     <span class="gallery-caption">Discovery — Main Engines</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/sr71-blackbird.png" alt="SR-71 Blackbird at Smithsonian Udvar-Hazy Center" loading="lazy">
+                    <img src="assets/sr71-blackbird.png" alt="SR-71 Blackbird at Smithsonian Udvar-Hazy Center"
+                        loading="lazy">
                     <span class="gallery-caption">SR-71 Blackbird — Udvar-Hazy</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/a6-intruder.png" alt="A-6 Intruder at Smithsonian Udvar-Hazy Center" loading="lazy">
+                    <img src="assets/a6-intruder.png" alt="A-6 Intruder at Smithsonian Udvar-Hazy Center"
+                        loading="lazy">
                     <span class="gallery-caption">A-6 Intruder — Udvar-Hazy</span>
                 </div>
                 <div class="gallery-item">
@@ -446,7 +471,8 @@
                     <span class="gallery-caption">Qatar A320 — SHJ</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/southwest-737.png" alt="Southwest Airlines Boeing 737 on approach near SJC" loading="lazy">
+                    <img src="assets/southwest-737.png" alt="Southwest Airlines Boeing 737 on approach near SJC"
+                        loading="lazy">
                     <span class="gallery-caption">Southwest 737 — SJC</span>
                 </div>
                 <div class="gallery-item">
